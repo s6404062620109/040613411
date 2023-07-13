@@ -1,0 +1,66 @@
+body{
+    background: #36486b;
+}
+.Header h1{
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+}
+.Title{
+    width: 1000px;
+    text-indent: 50px;
+    font-size: 20px;
+    margin-left: 450px;
+    padding: 20px;
+    background: #fefbd8;
+    border-radius: 8px;
+    border: 4px solid #618685;
+}
+.container{
+    padding: 15px;
+    text-align: center;
+    margin: 15px;
+    background: #fefbd8;
+    border-radius: 16px;
+    border: 4px solid #618685;
+}
+.container p{
+    font-size: 20px;
+}
+.container img{
+    width: 400px;
+    height: 300px;
+}
+
+.Content_header{
+    font-size: 26px;
+    text-decoration: underline;
+    padding: 15px;
+}
+
+.content{
+    padding: 15px;
+    display: inline-block;
+    width: 800px;
+}
+.name{
+    padding: 5px;
+    font-size: 24px;
+}
+.detail{
+    padding: 5px;
+    font-size: 18px;
+}
+
+.credit{
+    background: #fefbd8;
+    border-radius: 16px;
+    margin: 15px;
+}
+
+.credithead{
+    text-decoration: underline;
+    padding: 5px;
+    font-size: 24px;
+}
