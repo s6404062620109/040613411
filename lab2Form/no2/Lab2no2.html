@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>แบบฟอร์มจองทัวร์</h1>
+        <label>ข้อมูลทั่วไป</label>
+        <form action="form-echo.php">
+            <div style="border: 2px solid; padding: 10px;">
+                <label>ชื่อ-สกุล:</label><br>
+                <input
+                    type="text"
+                    placeholder="กรอกชื่อ-สกุล"
+                    name="NAME-SURNAME"
+                    pattern="^[ก-๛]+\s[ก-๛]+"
+                    title="โปรดกรอกชื่อ-สกุลตรงนี้"
+                    required
+                ><br>
+                <label>Email:</label><br>
+                <input
+                    type="text"
+                    name="EMAIL"
+                    pattern="[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$"
+                    title="โปรดกรอกอีเมลตรงนี้"
+                    required
+                ><br>
+                <label>โทรศัพท์:</label><br>
+                <input
+                    type="text"
+                    name="PHONENUMBER"
+                    value="+66"
+                    pattern="\+66[0-9]{9}"
+                    title="โปรดกรอกเบอร์โทรศัพท์ตรงนี้"
+                    required
+                ><br>
+                <label>ที่อยู่:</label><br>
+                <textarea cols="45" rows="5" name="ADDRESS" id="ADDRESS" required></textarea><br>
+                <label>รหัสไปรษณีย์:</label>
+                <input
+                    type="text"
+                    name="ZIPCODE"
+                    size="5"
+                    pattern="[0-9]{5}"
+                    title="โปรดกรอกรหัสไปรษณีย์ตรงนี้"
+                    required
+                ><br>
+                <label>รูปผู้จอง:</label>
+                <input type="file" id="ChoosenFile" name="FILENAME">
+            </div><br>
+
+            <label>ข้อมูลเข้าสู่ระบบ</label>
+            <div style="border: 2px solid; padding: 10px;">
+                <label>Username:</label><br>
+                <input
+                    type="text"
+                    name="USERNAME"
+                    pattern="[A-Za-z0-9_]{8,}"
+                    title="Please enter username here"
+                    required
+                ><br>
+                <label>Password:</label><br>
+                <input
+                    type="password"
+                    name="PASSWORD"
+                    pattern="[A-Za-z0-9]{8,}"
+                    title="Please enter password here"
+                    required
+                ><br>
+            </div><br>
+
+            <label>ข้อมูลทัวร์ที่ต้องการ</label>
+            <div style="border: 2px solid; padding: 10px;">
+                <label>แพ็คเกจทัวร์ที่ต้องการ :</label>
+                <select name="COUNTRY" required>
+                    <option value="">--select--</option>
+                    <option value="THAILAND">THAILAND</option>
+                    <option value="JAPAN">JAPAN</option>
+                    <option value="SOUTH-KOREA">SOUTH-KOREA</option>
+                    <option value="GERMAN">GERMAN</option>
+                    <option value="AMERICA">AMERICA</option>
+                </select><br>
+                <label>วันที่เดินทาง :</label>
+                <input
+                    type="date"
+                    name="DATETIMESTART"
+                    required
+                ><br>
+                <label>จำนวนผู้เดินทาง :</label>
+                <input
+                    type="number"
+                    name="NUMBEROFMEMBER"
+                    min="1"
+                    max="10"
+                    required
+                ><br>
+                <label>เน้นการท่องเที่ยวแบบใด?</label><br>
+                <input type="checkbox" name="FORMOFTRAVEL" value="ชอปปิ้ง">ชอปปิ้ง<br>
+                <input type="checkbox" name="FORMOFTRAVEL" value="ธรรมชาติ">ธรรมชาติ<br>
+                <input type="checkbox" name="FORMOFTRAVEL" value="ทะเล">ทะเล<br>
+            </div><br>
+            <label>ยอมรับเงื่อนไขและข้อตกลง</label>
+            <input type="radio" name="ACCEPTCONDITION" value="I agree" checked="checked">I agree
+            <input type="radio" name="ACCEPTCONDITION" value="I disagree">I disagree
+            &nbsp;
+            <input type="submit" value="จอง">
+        </form>
+    </div>
+</body>
+</html>

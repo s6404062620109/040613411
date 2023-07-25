@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+</head>
+<body>
+    <form action="form-echo.php" method="get">
+    USERNAME :
+        <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            required
+        >
+        <p><label>สาขาวิชา:</label>
+        <select name="dept" required>
+            <option value="">--Please choose an option--</option>
+            <option value="CS">CS</option>
+            <option value="IC">IC</option>
+            <option value="MA">MA</option>
+            <option value="IMI">IMI</option>
+            <option value="AS">AS</option>
+            <option value="AFET">AFET</option>
+        </select>
+        <p>
+        <p><label>Name-Surmane:</label>
+            <input
+                type="text"
+                placeholder="Name-Surname"
+                name="Name-Surmane"
+                pattern="^[A-Z]+\s[A-Z]+"
+                title="Please Enter Name-Surname Only English Big character"
+                required
+            >
+        </p>
+        <p><label>รหัสนักศึกษา:</label>
+            <input
+                type="text"
+                name="Student number"
+                placeholder="xx-xxxxxx-xxxx-x"
+                pattern="[0-9]{2}-[0-9]{6}-[0-9]{4}-[0-9]{1}"
+                title="Please Enter Student number Only xx-xxxxxx-xxxx-x"
+                required
+            >
+        </p>
+        <p><label>บ้านเลขที่:</label>
+            <input
+                type="text"
+                name="House number"
+                placeholder="xxx/xxx OR xxx"
+                pattern="[0-9/]"
+                title="Please Enter Student Number Only xxx/xxx OR xxx"
+                required
+            >
+        </p>
+        <p><label>รหัสสินค้า:</label>
+            <input
+                type="text"
+                name="Product number"
+                placeholder="XXX00"
+                pattern="[A-Z]{3}[0-9]{2}"
+                title="Please Enter Product Number Only XXX00"
+                required
+            >
+        </p>
+        <p><label>ชื่อ-สกุล:</label>
+            <input
+                type="text"
+                placeholder="กรอกชื่อ-สกุล"
+                name="ชื่อ-สกุล"
+                pattern="^[ก-๛]+\s[ก-๛]+"
+                title="โปรดกรอกชื่อ-สกุลเป็นภาษาไทยเท่านั้น"
+                required
+            >
+        </p>
+            <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
