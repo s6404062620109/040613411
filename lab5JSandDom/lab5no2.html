@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function inputfocus(){
+            var x1 = document.getElementById("input1");
+            var x2 = document.getElementById("input2");
+            var x3 = document.getElementById("input3");
+            x1.style.color = "green";
+            x2.style.color = "green";
+            x3.style.color = "green";
+        }
+    </script>
+</head>
+<body>
+    Name:<input type="text" id="input1" onblur="inputfocus()"><br>
+    Age:<input type="text" id="input2" onblur="inputfocus()"><br>
+    Birthdate:<input type="text" id="input3" onblur="inputfocus()">
+</body>
+</html>

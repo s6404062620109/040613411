@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let student = [
+            {
+                fullname: 'นายตั้งใจ เรียนมาก',
+                age: 18,
+                year: 1,
+                gpa: 3.40,
+                help: true
+            },
+            {
+                fullname: 'นางสาวพลอย เกรดเอ',
+                age: 18,
+                year: 1,
+                gpa: 2.5,
+                help: false
+            },
+            {
+                fullname: 'นายอนุสรณ์ วงษ์สนิท',
+                age: 19,
+                year: 2,
+                gpa: 3.2,
+                help: true
+            },
+            {
+                fullname: 'นายสง่ งาน ตลอดมา',
+                age: 19,
+                year: 2,
+                gpa: 3.00,
+                help: false
+            },
+            {
+                fullname: 'นางสาวใสใ่ จ ดงีาม',
+                age: 20,
+                year: 3,
+                gpa: 2.90,
+                help: true
+            },
+            {
+                fullname: 'นางสาวปอ เก็บเอ',
+                age: 20,
+                year: 3,
+                gpa: 2.75,
+                help: false
+            }
+        ]
+        var birthdate = 0
+        console.log(2+".")
+        for(let i = 0 ; i<student.length ; i++){
+            if(student[i].gpa >=3.2 || (student[i].year >=2 && student[i].help === true && student[i].gpa >= 2.75)){
+                let confirm = "ได้ทุนการศึกษา";
+                birthdate = 2564-student[i].age;
+                console.log(student[i].fullname+" เกิดเมื่อปี"+birthdate+" "+confirm+" เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย")
+            }
+            else{
+                birthdate = 2564-student[i].age;
+                console.log(student[i].fullname+" เกิดเมื่อปี"+birthdate+" ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์ และยังไม่ได้ช่วยงานภาควิชา")
+            }
+        }
+        console.log(3+".")
+        for(let i = 0 ; i<student.length ; i++){
+            if(student[i].year===1){
+                console.log("ชั้นปีที่ 1")
+                if(student[i].gpa >=3.2 || (student[i].year >=2 && student[i].help === true && student[i].gpa >= 2.75)){
+                    console.log(student[i].fullname+" เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย")
+                }
+                else{
+                    console.log("ไม่มี")
+                }
+            }
+            if(student[i].year===2){
+                console.log("ชั้นปีที่ 2")
+                if(student[i].gpa >=3.2 || (student[i].year >=2 && student[i].help === true && student[i].gpa >= 2.75)){
+                    console.log(student[i].fullname+" เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย")
+                }
+                else{
+                    console.log("ไม่มี")
+                }
+            }
+            if(student[i].year===3){
+                console.log("ชั้นปีที่ 3")
+                if(student[i].gpa >=3.2 || (student[i].year >=2 && student[i].help === true && student[i].gpa >= 2.75)){
+                    console.log(student[i].fullname+" เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย")
+                }
+                else{
+                    console.log("ไม่มี")
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <div id="name"></div>
+        <div id=""></div>
+    </div>
+</body>
+</html>

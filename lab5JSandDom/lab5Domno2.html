@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cal(){
+            let input1 = document.getElementById("input1").value;
+            let input2 = document.getElementById("input2").value;
+            let num1 = Number(input1);
+            let num2 = Number(input2);
+            let x = document.getElementById("symbol").value;
+            if(x==="+"){
+                document.getElementById("output").value = num1+num2
+            }
+            else if(x==="-"){
+                document.getElementById("output").value = num1-num2
+            }
+            else if(x==="*"){
+                document.getElementById("output").value = num1*num2
+            }
+            else{
+                document.getElementById("output").value = num1/num2
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="input1"/>
+    <select id="symbol">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input id="input2">
+    =<input id="output"> 
+    <button onclick="cal()">Go Go</button>
+</body>
+</html>
