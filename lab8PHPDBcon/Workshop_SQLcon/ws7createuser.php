@@ -1,4 +1,4 @@
-<?php include "connect.php" ?>
+<?php include "connectdb.php" ?>
 <?php
     $stmt = $pdo->prepare("INSERT INTO member VALUES (?, ?, ?, ?, ?, ?)");
     $stmt->bindParam(1, $_POST["username"]);

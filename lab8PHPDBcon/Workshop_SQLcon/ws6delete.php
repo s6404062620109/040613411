@@ -1,4 +1,4 @@
-<?php include "connect.php" ?>
+<?php include "connectdb.php" ?>
 <?php
     if (isset($_GET['username'])) {
         $username = $_GET['username'];
@@ -6,7 +6,7 @@
         $stmt = $pdo->prepare("DELETE FROM member WHERE username=?");
     
         if ($stmt->execute([$username])) {
-            header("location: ws6.php");
+            header("location: ws_6.php");
             //exit(); // Make sure to exit after redirecting
         } else {
             // Handle the case where the execution fails

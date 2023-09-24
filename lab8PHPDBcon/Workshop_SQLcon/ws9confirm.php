@@ -1,4 +1,4 @@
-<?php include "connect.php" ?>
+<?php include "connectdb.php" ?>
 
 <?php
     $stmt = $pdo->prepare("UPDATE member SET password=?, name=?, address=?, mobile=?, email=? 

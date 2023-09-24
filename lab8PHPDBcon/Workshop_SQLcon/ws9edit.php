@@ -1,4 +1,4 @@
-<?php include "connect.php" ?>
+<?php include "connectdb.php" ?>
 <?php
     $stmt = $pdo->prepare("SELECT * FROM member WHERE username = ?");
     $stmt->bindParam(1, $_GET["username"]); 
