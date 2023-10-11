@@ -12,14 +12,16 @@
 <body>
 <?php
     if($_SESSION["role"] == "Admin"){
-        $stmt = $pdo->prepare("SELECT * FROM product");
+        $stmt = $pdo->prepare("SELECT * FROM member");
         $stmt->execute();
         while ($row = $stmt->fetch()) {
-                echo "หมายเลขออร์ไอเทม: " . $row["pid"] . ",<br>";
-                echo "หมายเลขออร์เดอร์: " . $row["pname"] . ",<br>";
-                echo "หมายเลยสินค้า: " . $row["pdetail"] . "<br>";
-                echo "หมายเลยสินค้า: " . $row["price"] . "<br>";
-                echo "จำนวนสินค้าคงเหลือ: " . $row["quantity"] . "<br>";
+                echo "username: " . $row["username"] . ",<br>";
+                echo "name: " . $row["name"] . ",<br>";
+                echo "address: " . $row["address"] . "<br>";
+                echo "mobile: " . $row["mobile"] . "<br>";
+                echo "email: " . $row["email"] . "<br>";
+                echo "role: " . $row["role"] . "<br>";
+                echo "<a href='changerole.php?username=". $row["username"] ."'>ให้สิทธิ์ Admin</a>";
                 echo "<hr>\n";
             }
     }
